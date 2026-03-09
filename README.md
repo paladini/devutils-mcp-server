@@ -180,6 +180,48 @@ echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":
 
 ---
 
+## ❓ FAQ & Design Philosophy
+
+### Why MCP, and not just a library?
+
+**Valid criticism:** If you're writing Python scripts and need to hash something, `hashlib` is 2 lines of code. Why run MCP overhead?
+
+**Answer:** This server is optimized for **AI agents** in multi-step workflows, not programmers writing code:
+
+1. **AI hallucination cost >> MCP overhead**  
+   An AI model spending 50ms calling an MCP tool (vs. 1ms library call) is negligible when the alternative is the model *making up a hash* or using the wrong encoding. A wrong hash → debugging time → 1000x worse than overhead.
+
+2. **Reliable tool semantics**  
+   Libraries let the model do *anything* (import, call, write loops). MCP enforces strict tool contracts. For example, `jwt_decode` *always* returns human-readable dates with timezone support — no model confusion about Unix epoch interpretation.
+
+3. **Universally accessible**  
+   Any AI client (Claude, Cursor, VS Code, ChatGPT plugins) can use these tools. A Python library only works if your agent is Python-based.
+
+4. **Multi-tenant safety**  
+   In production systems, letting AI agents run arbitrary library code is a security risk. MCP provides explicit tool whitelisting with input validation.
+
+### When to use DevUtils versus alternatives
+
+**Use DevUtils if:**
+- You're using Claude, Cursor, ChatGPT, or other AI agents
+- You want reliable, validated utility operations in your AI workflows
+- You need 36+ tools in one container (vs. learning 8 different tool specs)
+- You want educational reference implementations of common algorithms
+
+**Don't use DevUtils if:**
+- You're writing regular Python/Node/Go code (use native libraries like `hashlib`, `crypto`)
+- You need extreme performance (direct library calls are 1000x faster)
+- You're in an environment without Docker/container support
+
+### Design philosophy
+
+- **Small & focused**: 36 utilities, zero external APIs, ~50MB container
+- **Security-first**: Non-root user, Alpine Linux, minimal attack surface
+- **AI-friendly**: Consistent naming (`<domain>_<operation>`), strict schemas, human-readable outputs
+- **Battle-tested**: Each tool references standard implementations (zod validation, bcryptjs hashing, etc.)
+
+---
+
 ## 📝 Contributing
 
 1. Fork the repository
