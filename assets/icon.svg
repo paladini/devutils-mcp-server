@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#1D1D1F"/>
+  <!-- left bracket -->
+  <path d="M18 20 L10 32 L18 44" stroke="#58A6FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- right bracket -->
+  <path d="M46 20 L54 32 L46 44" stroke="#58A6FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- wrench body -->
+  <path d="M28 38 L36 26" stroke="#E6EDF3" stroke-width="3" stroke-linecap="round"/>
+  <!-- wrench head circle -->
+  <circle cx="37.5" cy="24.5" r="4.5" stroke="#E6EDF3" stroke-width="2.5"/>
+  <!-- wrench handle end -->
+  <circle cx="26.5" cy="39.5" r="3" fill="#E6EDF3"/>
+</svg>
