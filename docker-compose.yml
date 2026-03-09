@@ -3,4 +3,5 @@ services:
     build: .
     image: devutils-mcp-server:latest
     stdin_open: true
+    tty: false
     restart: "no"

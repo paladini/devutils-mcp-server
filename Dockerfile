@@ -4,7 +4,7 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 
 # Copy package files
-COPY package.json package-lock.json* ./
+COPY package.json package-lock.json ./
 
 # Install all dependencies (including dev)
 RUN npm install
@@ -25,7 +25,7 @@ WORKDIR /app
 RUN addgroup -S mcp && adduser -S mcp -G mcp
 
 # Copy only production deps
-COPY package.json package-lock.json* ./
+COPY package.json package-lock.json ./
 RUN npm install --omit=dev && npm cache clean --force
 
 # Copy compiled code
