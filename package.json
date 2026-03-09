@@ -1,0 +1,41 @@
+{
+  "name": "devutils-mcp-server",
+  "version": "1.0.0",
+  "description": "A comprehensive developer utilities MCP server for the Docker MCP Toolkit. Provides ~25 everyday tools: hashing, encoding, UUID generation, JWT decoding, formatting, converters, and more.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "docker:build": "docker build -t devutils-mcp-server .",
+    "docker:run": "docker run -i --rm devutils-mcp-server"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docker",
+    "developer-tools",
+    "utilities",
+    "devutils",
+    "hash",
+    "uuid",
+    "jwt",
+    "base64",
+    "encoding"
+  ],
+  "author": "Fernando Paladini",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "bcryptjs": "^2.4.3",
+    "nanoid": "^5.1.5",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
