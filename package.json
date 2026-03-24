@@ -45,7 +45,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paladini/devutils-mcp-server.git"
+    "url": "git+https://github.com/paladini/devutils-mcp-server.git"
   },
   "homepage": "https://github.com/paladini/devutils-mcp-server#readme",
   "bugs": {
