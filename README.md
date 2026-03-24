@@ -7,6 +7,8 @@
 [![Docker](https://img.shields.io/badge/Docker-MCP_Toolkit-blue)](https://hub.docker.com/mcp)
 [![MCP](https://img.shields.io/badge/MCP-compatible-green)](https://modelcontextprotocol.io)
 
+[![devutils-mcp-server MCP server](https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/card.svg)](https://glama.ai/mcp/servers/paladini/devutils-mcp-server)
+
 ---
 
 ## 🎯 Why?
