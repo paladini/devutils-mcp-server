@@ -1,0 +1,10 @@
+# Smithery configuration file: https://smithery.ai/docs/smithery-yaml
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+    additionalProperties: false
+  commandFunction: |-
+    (_config) => ({ command: "npx", args: ["devutils-mcp-server"] })
+  exampleConfig: {}

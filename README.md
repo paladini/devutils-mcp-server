@@ -1,19 +1,20 @@
 # 🛠️ DevUtils MCP Server
 
-> **A comprehensive developer utilities toolkit for the Docker MCP Catalog.**
-> 36 everyday tools — hashing, encoding, UUID generation, JWT decoding, JSON formatting, network tools, text utilities, and more.
+> **36 everyday developer tools for any MCP-compatible AI assistant.**
+> Hashing, encoding, UUID generation, JWT decoding, JSON formatting, network tools, text utilities, and more — all local, no external APIs.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Docker](https://img.shields.io/badge/Docker-MCP_Toolkit-blue)](https://hub.docker.com/mcp)
 [![MCP](https://img.shields.io/badge/MCP-compatible-green)](https://modelcontextprotocol.io)
+[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://hub.docker.com)
+[![npm](https://img.shields.io/badge/npm-devutils--mcp--server-red)](https://www.npmjs.com/package/devutils-mcp-server)
+[![Glama](https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/paladini/devutils-mcp-server)
+[![smithery badge](https://smithery.ai/badge/devutils-mcp-server)](https://smithery.ai/server/devutils-mcp-server)
 
 ---
 
 ## 🎯 Why?
 
-The Docker MCP Catalog has 200+ servers for databases, APIs, monitoring, and productivity — but **no basic developer utilities** toolkit.
-
-Every developer needs to hash strings, encode/decode data, generate UUIDs, decode JWTs, format JSON, calculate CIDR ranges, and convert timestamps **every day**. DevUtils MCP Server brings all of these tools directly into your AI assistant.
+Every developer needs to hash strings, encode/decode data, generate UUIDs, decode JWTs, format JSON, calculate CIDR ranges, and convert timestamps **every day**. DevUtils MCP Server brings all of these tools directly into your AI assistant — works with Claude, Cursor, VS Code, Windsurf, and any other MCP-compatible client.
 
 Think of it as **`busybox` for developer tools** — small, essential, and always useful.
 
@@ -21,41 +22,117 @@ Think of it as **`busybox` for developer tools** — small, essential, and alway
 
 ## 📦 Quick Start
 
-### With Docker
+### Option 1 — npx (no install)
 
 ```bash
-# Build the image
-docker build -t devutils-mcp-server .
+npx devutils-mcp-server
+```
 
-# Run (interactive, for MCP clients)
+### Option 2 — Docker
+
+```bash
+# Pull and run
+docker run -i --rm ghcr.io/paladini/devutils-mcp-server
+
+# Or build locally
+docker build -t devutils-mcp-server .
 docker run -i --rm devutils-mcp-server
 ```
 
-### With Claude Desktop
+### Option 3 — Local install
 
-Add to your `claude_desktop_config.json`:
+```bash
+npm install -g devutils-mcp-server
+devutils-mcp-server
+```
+
+---
+
+## ⚙️ Client Setup
+
+### Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+
+```json
+{
+  "mcpServers": {
+    "devutils": {
+      "command": "npx",
+      "args": ["devutils-mcp-server"]
+    }
+  }
+}
+```
+
+Or with Docker:
 
 ```json
 {
   "mcpServers": {
     "devutils": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "devutils-mcp-server"]
+      "args": ["run", "-i", "--rm", "ghcr.io/paladini/devutils-mcp-server"]
     }
   }
 }
 ```
 
-### With Docker MCP Toolkit (Docker Desktop)
+### Cursor
+
+Add to your Cursor MCP settings (`~/.cursor/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "devutils": {
+      "command": "npx",
+      "args": ["devutils-mcp-server"]
+    }
+  }
+}
+```
+
+### VS Code (GitHub Copilot)
+
+Add to your `.vscode/mcp.json` in the workspace, or to your user settings:
+
+```json
+{
+  "servers": {
+    "devutils": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["devutils-mcp-server"]
+    }
+  }
+}
+```
+
+### Windsurf
+
+Add to `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "devutils": {
+      "command": "npx",
+      "args": ["devutils-mcp-server"]
+    }
+  }
+}
+```
+
+### Docker MCP Toolkit (Docker Desktop)
 
 If this server is available in the [Docker MCP Catalog](https://hub.docker.com/mcp), you can enable it directly from Docker Desktop:
 
 1. Open **Docker Desktop** → **MCP Toolkit**
 2. Search for **DevUtils**
 3. Click **Enable**
-4. It will be available to any connected MCP client (Claude, Cursor, VS Code, etc.)
 
-### Local Development (without Docker)
+### Local Development
 
 ```bash
 npm install
@@ -174,7 +251,7 @@ The image uses a multi-stage build for minimal size:
 # Build
 docker build -t devutils-mcp-server .
 
-# Test
+# Test (send an MCP initialize request)
 echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"test","version":"1.0.0"}}}' | docker run -i --rm devutils-mcp-server
 ```
 
@@ -195,7 +272,7 @@ echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":
    Libraries let the model do *anything* (import, call, write loops). MCP enforces strict tool contracts. For example, `jwt_decode` *always* returns human-readable dates with timezone support — no model confusion about Unix epoch interpretation.
 
 3. **Universally accessible**  
-   Any AI client (Claude, Cursor, VS Code, ChatGPT plugins) can use these tools. A Python library only works if your agent is Python-based.
+   Any MCP-compatible client (Claude, Cursor, VS Code Copilot, Windsurf, and more) can use these tools. A Python library only works if your agent is Python-based.
 
 4. **Multi-tenant safety**  
    In production systems, letting AI agents run arbitrary library code is a security risk. MCP provides explicit tool whitelisting with input validation.
@@ -203,21 +280,22 @@ echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":
 ### When to use DevUtils versus alternatives
 
 **Use DevUtils if:**
-- You're using Claude, Cursor, ChatGPT, or other AI agents
+- You're using Claude, Cursor, VS Code Copilot, Windsurf, or any MCP-compatible AI assistant
 - You want reliable, validated utility operations in your AI workflows
-- You need 36+ tools in one container (vs. learning 8 different tool specs)
+- You need 36+ tools in one package (vs. learning 8 different tool specs)
 - You want educational reference implementations of common algorithms
 
 **Don't use DevUtils if:**
 - You're writing regular Python/Node/Go code (use native libraries like `hashlib`, `crypto`)
 - You need extreme performance (direct library calls are 1000x faster)
-- You're in an environment without Docker/container support
+- Your AI client does not support MCP
 
 ### Design philosophy
 
 - **Small & focused**: 36 utilities, zero external APIs, ~50MB container
 - **Security-first**: Non-root user, Alpine Linux, minimal attack surface
 - **AI-friendly**: Consistent naming (`<domain>_<operation>`), strict schemas, human-readable outputs
+- **Client-agnostic**: Works with any MCP-compatible client via stdio transport
 - **Battle-tested**: Each tool references standard implementations (zod validation, bcryptjs hashing, etc.)
 
 ---

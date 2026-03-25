@@ -12,7 +12,7 @@ import { registerTextTools } from "./tools/text.js";
 
 const server = new McpServer({
   name: "devutils-mcp-server",
-  version: "1.0.0",
+  version: "1.1.0",
   description:
     "A comprehensive suite of everyday developer utility tools. " +
     "Hash generators, encoding/decoding, UUID/password generators, " +

@@ -1,6 +1,6 @@
 {
   "name": "devutils-mcp-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server with 36 zero-auth developer utilities: hashing (MD5/SHA/bcrypt), encoding (Base64/hex/URL), UUID/password generation, JWT decoding, JSON/YAML/XML formatting, timestamp conversion, network tools (CIDR, IP, DNS), and text utilities.",
   "main": "dist/index.js",
   "bin": {
