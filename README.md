@@ -46,6 +46,16 @@ npm install -g devutils-mcp-server
 devutils-mcp-server
 ```
 
+### Option 4 — Official MCP Registry
+
+Listed on the [Official MCP Registry](https://registry.modelcontextprotocol.io) as `io.github.paladini/devutils-mcp-server`.
+
+```bash
+npx -y devutils-mcp-server
+```
+
+Search: https://registry.modelcontextprotocol.io — query `io.github.paladini/devutils`
+
 ---
 
 ## ⚙️ Client Setup
