@@ -1,0 +1,48 @@
+name: Bug report
+description: Tool error, unexpected output, or install issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: e.g. 1.1.0
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name (if applicable)
+      placeholder: e.g. jwt_decode
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      options:
+        - Cursor
+        - Claude Desktop
+        - Claude Code
+        - VS Code
+        - Windsurf
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

@@ -6,5 +6,5 @@ startCommand:
     properties: {}
     additionalProperties: false
   commandFunction: |-
-    (_config) => ({ command: "npx", args: ["devutils-mcp-server"] })
+    (_config) => ({ command: "npx", args: ["-y", "devutils-mcp-server"] })
   exampleConfig: {}

@@ -9,6 +9,9 @@
 [![npm](https://img.shields.io/badge/npm-devutils--mcp--server-red)](https://www.npmjs.com/package/devutils-mcp-server)
 [![Glama](https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/paladini/devutils-mcp-server)
 [![smithery badge](https://smithery.ai/badge/devutils-mcp-server)](https://smithery.ai/server/devutils-mcp-server)
+[![Registry](https://img.shields.io/badge/Registry-active-blue)](https://registry.modelcontextprotocol.io)
+
+**Also available as a plugin:** [devutils-cursor-plugin](https://github.com/paladini/devutils-cursor-plugin) — one-click install for Cursor and Claude Code.
 
 ---
 
@@ -69,7 +72,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
   "mcpServers": {
     "devutils": {
       "command": "npx",
-      "args": ["devutils-mcp-server"]
+      "args": ["-y", "devutils-mcp-server"]
     }
   }
 }
@@ -90,17 +93,28 @@ Or with Docker:
 
 ### Cursor
 
-Add to your Cursor MCP settings (`~/.cursor/mcp.json`):
+**Plugin (recommended):** Install [DevUtils MCP](https://github.com/paladini/devutils-cursor-plugin) from **Cursor Settings → Customize**, or add from GitHub `paladini/devutils-cursor-plugin`.
+
+**Manual:** Add to your Cursor MCP settings (`~/.cursor/mcp.json`):
 
 ```json
 {
   "mcpServers": {
     "devutils": {
       "command": "npx",
-      "args": ["devutils-mcp-server"]
+      "args": ["-y", "devutils-mcp-server"]
     }
   }
 }
+```
+
+### Claude Code
+
+Install the plugin:
+
+```text
+/plugin marketplace add paladini/devutils-cursor-plugin
+/plugin install devutils-mcp@devutils-cursor-plugin
 ```
 
 ### VS Code (GitHub Copilot)
@@ -113,7 +127,7 @@ Add to your `.vscode/mcp.json` in the workspace, or to your user settings:
     "devutils": {
       "type": "stdio",
       "command": "npx",
-      "args": ["devutils-mcp-server"]
+      "args": ["-y", "devutils-mcp-server"]
     }
   }
 }
@@ -128,7 +142,7 @@ Add to `~/.codeium/windsurf/mcp_config.json`:
   "mcpServers": {
     "devutils": {
       "command": "npx",
-      "args": ["devutils-mcp-server"]
+      "args": ["-y", "devutils-mcp-server"]
     }
   }
 }
@@ -307,6 +321,18 @@ echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":
 - **AI-friendly**: Consistent naming (`<domain>_<operation>`), strict schemas, human-readable outputs
 - **Client-agnostic**: Works with any MCP-compatible client via stdio transport
 - **Battle-tested**: Each tool references standard implementations (zod validation, bcryptjs hashing, etc.)
+
+---
+
+## 🌍 Available on
+
+| Channel | Link |
+| --- | --- |
+| **Official MCP Registry** | `io.github.paladini/devutils-mcp-server` — [registry.modelcontextprotocol.io](https://registry.modelcontextprotocol.io) |
+| **npm** | [devutils-mcp-server](https://www.npmjs.com/package/devutils-mcp-server) |
+| **Glama** | [glama.ai/mcp/servers/paladini/devutils-mcp-server](https://glama.ai/mcp/servers/paladini/devutils-mcp-server) |
+| **Smithery** | [smithery.ai/server/devutils-mcp-server](https://smithery.ai/server/devutils-mcp-server) |
+| **Cursor / Claude plugin** | [devutils-cursor-plugin](https://github.com/paladini/devutils-cursor-plugin) |
 
 ---
 

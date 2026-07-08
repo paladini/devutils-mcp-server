@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Plugin install issues
+    url: https://github.com/paladini/devutils-cursor-plugin/issues/new
+    about: Cursor or Claude Code plugin install problems
+  - name: Feature requests
+    url: https://github.com/paladini/devutils-mcp-server/issues/new?labels=enhancement
+    about: Suggest a new tool or improvement
