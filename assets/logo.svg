@@ -1,69 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DevUtils MCP">
   <title>DevUtils MCP</title>
 
-  <!-- Isometric cube: top = terminal, left = braces, right = code tags -->
+  <path d="M64 22 L30 46 L64 70 L98 46 Z" fill="#1E293B"/>
+  <path d="M30 46 L64 70 L64 118 L30 94 Z" fill="#3B82F6"/>
+  <path d="M98 46 L64 70 L64 118 L98 94 Z" fill="#2DD4BF"/>
 
-  <!-- Top face -->
-  <path
-    d="M64 22 L30 46 L64 70 L98 46 Z"
-    fill="#1E293B"
-  />
+  <path d="M64 22 L30 46 L30 94 L64 118 L98 94 L98 46 Z" fill="none" stroke="#121826" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 22 L64 70 L64 118" fill="none" stroke="#121826" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 46 L64 70 L98 46" fill="none" stroke="#121826" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
 
-  <!-- Left face -->
-  <path
-    d="M30 46 L64 70 L64 118 L30 94 Z"
-    fill="#3B82F6"
-  />
-
-  <!-- Right face -->
-  <path
-    d="M98 46 L64 70 L64 118 L98 94 Z"
-    fill="#2DD4BF"
-  />
-
-  <!-- Dark borders -->
-  <path
-    d="M64 22 L30 46 L30 94 L64 118 L98 94 L98 46 Z"
-    fill="none"
-    stroke="#121826"
-    stroke-width="7"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-  />
-  <path
-    d="M64 22 L64 70 L64 118"
-    fill="none"
-    stroke="#121826"
-    stroke-width="7"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-  />
-  <path
-    d="M30 46 L64 70 L98 46"
-    fill="none"
-    stroke="#121826"
-    stroke-width="7"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-  />
-
-  <!-- Terminal: > _ -->
-  <g fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M50 42 L58 48 L50 54" />
-    <path d="M62 54 H76" />
+  <!-- Top face: flat on horizontal plane (compress + shear along depth axis) -->
+  <g transform="translate(64 46) scale(1 0.58) skewX(-30) translate(-64 -46)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M51 41 L59 47 L51 53"/>
+      <path d="M63 51 H77"/>
+    </g>
   </g>
 
-  <!-- Braces: { } -->
-  <g fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M38 58 C32 58 32 72 38 72 C32 72 32 86 38 86" />
-    <path d="M52 58 C58 58 58 72 52 72 C58 72 58 86 52 86" />
+  <!-- Left face: vertical plane tilting right -->
+  <g transform="translate(47 82) skewX(26) translate(-47 -82)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M37 65 C31 65 31 75 36 75 C31 75 31 85 36 85 C31 85 31 95 37 95"/>
+      <path d="M51 65 C57 65 57 75 52 75 C57 75 57 85 52 85 C57 85 57 95 51 95"/>
+    </g>
   </g>
 
-  <!-- Code tags: </> -->
-  <g fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M78 58 L70 72" />
-    <path d="M74 60 L68 78" />
-    <path d="M90 58 L98 72" />
-    <path d="M94 66 L90 72 L94 78" />
+  <!-- Right face: vertical plane tilting left -->
+  <g transform="translate(81 82) skewX(-26) translate(-81 -82)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M71 65 L63 75 L71 85"/>
+      <path d="M76 67 L80 89"/>
+      <path d="M87 65 L95 75 L87 85"/>
+    </g>
   </g>
 </svg>
