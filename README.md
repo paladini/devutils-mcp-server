@@ -10,8 +10,13 @@
 [![Glama](https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/paladini/devutils-mcp-server)
 [![smithery badge](https://smithery.ai/badge/devutils-mcp-server)](https://smithery.ai/server/devutils-mcp-server)
 [![Registry](https://img.shields.io/badge/Registry-active-blue)](https://registry.modelcontextprotocol.io)
+[![GitHub stars](https://img.shields.io/github/stars/paladini/devutils-mcp-server?style=social&label=Star)](https://github.com/paladini/devutils-mcp-server/stargazers)
 
 **Also available as a plugin:** [devutils-cursor-plugin](https://github.com/paladini/devutils-cursor-plugin) — one-click install for Cursor and Claude Code.
+
+<p align="center">
+  <img src="assets/demo.gif" alt="DevUtils MCP Server demo — UUID generation, JWT decode, JSON validation" width="720">
+</p>
 
 ---
 
@@ -337,6 +342,8 @@ echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":
 ---
 
 ## 📝 Contributing
+
+Questions and ideas: [GitHub Discussions](https://github.com/paladini/devutils-mcp-server/discussions)
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feat/amazing-tool`)

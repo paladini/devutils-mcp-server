@@ -3,7 +3,7 @@
   "name": "io.github.paladini/devutils-mcp-server",
   "title": "DevUtils MCP Server",
   "description": "36 local developer utilities for AI agents. Hash, encoding, UUID, JWT, JSON, network, text.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": {
     "url": "https://github.com/paladini/devutils-mcp-server",
     "source": "github"
@@ -12,7 +12,7 @@
     {
       "registryType": "npm",
       "identifier": "devutils-mcp-server",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "transport": {
         "type": "stdio"
       }

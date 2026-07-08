@@ -1,6 +1,6 @@
 {
   "name": "devutils-mcp-server",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "mcpName": "io.github.paladini/devutils-mcp-server",
   "description": "MCP server with 36 local developer utilities: hashing (MD5/SHA/bcrypt), encoding (Base64/hex/URL/HTML), UUID/password generation, JWT decode, JSON formatting, timestamp conversion, CIDR/IP tools, and text utilities.",
   "main": "dist/index.js",

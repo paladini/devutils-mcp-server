@@ -6,3 +6,6 @@ contact_links:
   - name: Feature requests
     url: https://github.com/paladini/devutils-mcp-server/issues/new?labels=enhancement
     about: Suggest a new tool or improvement
+  - name: Questions
+    url: https://github.com/paladini/devutils-mcp-server/discussions/new
+    about: Ask questions in GitHub Discussions

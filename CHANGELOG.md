@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2026-07-08
+
+### Added
+
+- Demo GIF in README (`assets/demo.gif`).
+- Logo SVG icon derived from `devutils-mpc-logo.png`.
+- GitHub Discussions with Q&A template.
+- Star badge on README.
+
+### Changed
+
+- npm package description aligned with actual tool set (patch release).
+
 ## [1.1.0] - 2026-07-08
 
 ### Added

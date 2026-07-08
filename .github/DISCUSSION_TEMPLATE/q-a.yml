@@ -1,0 +1,26 @@
+title: "Question: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask about install, tools, or MCP client setup. For plugin install issues, see [devutils-cursor-plugin discussions](https://github.com/paladini/devutils-cursor-plugin/discussions).
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      options:
+        - Cursor
+        - Claude Code
+        - Claude Desktop
+        - VS Code
+        - Windsurf
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
