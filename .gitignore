@@ -1,5 +1,7 @@
 node_modules/
 dist/
+mcp-publisher.exe
+mcp-publisher.tar.gz
 *.js.map
 *.d.ts
 *.d.ts.map

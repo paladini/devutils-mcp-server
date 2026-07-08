@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.paladini/devutils-mcp-server",
   "title": "DevUtils MCP Server",
-  "description": "36 local developer utilities for AI agents — hash, encoding, UUID, JWT, JSON, network, text. Zero API keys.",
+  "description": "36 local developer utilities for AI agents. Hash, encoding, UUID, JWT, JSON, network, text.",
   "version": "1.1.0",
   "repository": {
     "url": "https://github.com/paladini/devutils-mcp-server",
