@@ -1,6 +1,6 @@
 # ­ƒøá´©Å DevUtils MCP Server
 
-<img alt="Harness Score L0" src="https://paladini.github.io/harness-score/maturity/badge-l0.svg" height="20">
+<a href="https://paladini.github.io/harness-score/guide/maturity-model#l0-unharnessed" title="Harness Score — AI coding harness maturity"><img alt="Harness Score L0 (Unharnessed): measures AI-assisted development harness maturity with harness-score" src="https://paladini.github.io/harness-score/maturity/badge-l0.svg" height="20"></a>
 > **36 everyday developer tools for any MCP-compatible AI assistant.**
 > Hashing, encoding, UUID generation, JWT decoding, JSON formatting, network tools, text utilities, and more ÔÇö all local, no external APIs.
 
