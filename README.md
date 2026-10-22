@@ -18,7 +18,7 @@ Think of it as **`busybox` for developer tools** — small, essential, and alway
   <a href="https://www.npmjs.com/package/devutils-mcp-server"><img alt="npm" src="https://img.shields.io/npm/v/devutils-mcp-server.svg"></a>
   <a href="https://github.com/paladini/devutils-mcp-server/blob/main/Dockerfile"><img alt="Docker" src="https://img.shields.io/badge/Docker-ready-blue"></a>
   <a href="https://glama.ai/mcp/servers/paladini/devutils-mcp-server"><img alt="Glama" src="https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/score.svg"></a>
-  <a href="https://smithery.ai/server/devutils-mcp-server"><img alt="Smithery" src="https://smithery.ai/badge/devutils-mcp-server"></a>
+  <a href="https://lightnow.ai/servers/io.github.paladini/devutils-mcp-server"><img alt="LightNow capabilities" src="https://lightnow.ai/badge/io.github.paladini/devutils-mcp-server"></a>
   <a href="https://registry.modelcontextprotocol.io"><img alt="MCP Registry" src="https://img.shields.io/badge/MCP_Registry-io.github.paladini%2Fdevutils--mcp--server-blue"></a>
   <a href="https://github.com/paladini/devutils-mcp-server/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/paladini/devutils-mcp-server?style=social"></a>
 </p>
