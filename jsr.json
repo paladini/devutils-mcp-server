@@ -1,0 +1,12 @@
+{
+  "name": "@paladini/devutils-mcp-server",
+  "version": "1.1.1",
+  "description": "MCP server with 36 local developer utilities: hashing (MD5/SHA/bcrypt), encoding (Base64/hex/URL/HTML), UUID/password generation, JWT decode, JSON formatting, timestamp conversion, CIDR/IP tools, and text utilities.",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "publish": {
+    "include": ["src/**/*.ts", "README.md", "LICENSE"]
+  }
+}
