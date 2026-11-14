@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+/**
+ * DevUtils MCP server entry point (stdio transport).
+ * Publish surface for JSR; run via npm/npx or `deno run jsr:@paladini/devutils-mcp-server`.
+ *
+ * @module
+ */
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { registerHashTools } from "./tools/hash.js";

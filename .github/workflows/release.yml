@@ -74,6 +74,23 @@ jobs:
         if: steps.npm.outputs.published == 'false'
         run: npm publish --access public --provenance --tag "${{ steps.package.outputs.dist_tag }}"
 
+  jsr:
+    if: github.event_name == 'push'
+    name: Publish JSR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Publish to JSR
+        run: npx -y jsr publish --allow-slow-types
+
   github-packages:
     name: Publish to GitHub Packages
     runs-on: ubuntu-latest

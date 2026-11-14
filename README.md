@@ -16,6 +16,7 @@ Think of it as **`busybox` for developer tools** — small, essential, and alway
   <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
   <a href="https://modelcontextprotocol.io"><img alt="MCP" src="https://img.shields.io/badge/MCP-compatible-green"></a>
   <a href="https://www.npmjs.com/package/devutils-mcp-server"><img alt="npm" src="https://img.shields.io/npm/v/devutils-mcp-server.svg"></a>
+  <a href="https://jsr.io/@paladini/devutils-mcp-server"><img alt="JSR" src="https://jsr.io/badges/@paladini/devutils-mcp-server"></a>
   <a href="https://github.com/paladini/devutils-mcp-server/blob/main/Dockerfile"><img alt="Docker" src="https://img.shields.io/badge/Docker-ready-blue"></a>
   <a href="https://glama.ai/mcp/servers/paladini/devutils-mcp-server"><img alt="Glama" src="https://glama.ai/mcp/servers/paladini/devutils-mcp-server/badges/score.svg"></a>
   <a href="https://smithery.ai/server/devutils-mcp-server"><img alt="Smithery" src="https://smithery.ai/badge/devutils-mcp-server"></a>
@@ -74,6 +75,20 @@ npx -y devutils-mcp-server
 npm install -g devutils-mcp-server
 devutils-mcp-server
 ```
+
+### Install from JSR
+
+Published on [JSR](https://jsr.io/@paladini/devutils-mcp-server) as `@paladini/devutils-mcp-server`.
+
+```bash
+npx jsr add @paladini/devutils-mcp-server
+```
+
+```bash
+deno run --allow-read --allow-env jsr:@paladini/devutils-mcp-server
+```
+
+**Runtime compatibility:** Node.js **≥ 18** (Node 22 recommended). The package is an MCP stdio server; use npm/npx or Deno with JSR as shown above.
 
 ### Docker
 
